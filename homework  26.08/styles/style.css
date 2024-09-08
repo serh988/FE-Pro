@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald";
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+/* HEADER START */
+
+header {
+  min-height: 740px;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+
+.header-h1 {
+  max-width: 734px;
+  font-size: 64px;
+  letter-spacing: 0.01em;
+}
+
+.header-h3 {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 500px) {
+  .header-h1 {
+    font-size: 50px;
+  }
+}
+
+/* HEADER END */
+
+/* EXPERIENCE START */
+
+.experience {
+  position: relative;
+}
+
+.experience-items {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.experience-items {
+  background-color: #F7F7F7;
+  padding: 57px 130px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.item-h4 {
+  color: #F7654A;
+  font-size: 72px;
+}
+
+.item-h5 {
+  font-size: 36px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.item-h6 {
+  color: #999999;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1200px) {
+  .experience-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .experience-items {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* EXPERIENCE END */
+
+/* PROJECTS START */
+
+.projects {
+  padding: 100px 0;
+}
+
+.projects-title {
+  font-size: 36px;
+  color: #404149;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 203px;
+}
+
+.project-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project-item {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* SMALL ICON */
+.small-icon {
+  width: 55px;
+  height: 6px;
+  background-color: #F7654A;
+  margin: 10px 0;
+}
+
+.project-name {
+  font-size: 24px;
+  color: #404149;
+  margin-bottom: 15px;
+}
+
+.project-description {
+  font-size: 16px;
+  color: #999999;
+}
+
+/* PROJECTS END */
+
+/* ACTION START */
+.action {
+  background-color: #F7654A;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.action-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.action-text {
+  max-width: 600px;
+}
+
+.action-text h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.action-text p {
+  font-size: 24px;
+
+}
+
+.action-button {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  }
+
+.button {
+  font-family: 'Oswald', sans-serif;
+  background-color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 175px;
+  height: 49px;
+  text-transform: uppercase;
+  
+}
+/* ACTION END */
+
+/* SERVICES START */
+.services {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.services-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 66px;
+}
+
+.services-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.services-item {
+  background-color: #f7f7f7;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 350px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-icon {
+  margin-bottom: 30px;
+}
+
+.services-item-name {
+  
+  font-size: 21px;
+  font-weight: 700;
+  width: 172px;
+  height: 62px;
+}
+
+@media screen and (max-width: 768px) {
+  .services-items {
+    grid-template-columns: repeat(2, 1fr);
+    /* Два елементи в ряд на середніх екранах */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .services-items {
+    grid-template-columns: 1fr;
+    /* Один елемент в ряд на маленьких екранах */
+  }
+}
+
+/* SERVICES END */
