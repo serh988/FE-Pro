@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Библиотека книг</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1>Библиотека книг</h1>
+
+    <form id="bookForm">
+        <label for="bookTitle">Название книги:</label>
+        <input type="text" id="bookTitle" name="bookTitle" required />
+        <br />
+        <label for="bookAuthor">Автор:</label>
+        <input type="text" id="bookAuthor" name="bookAuthor" required />
+        <br />
+        <label for="bookYear">Год издания:</label>
+        <input type="number" id="bookYear" name="bookYear" required />
+        <br />
+        <label for="bookPages">Количество страниц:</label>
+        <input type="number" id="bookPages" name="bookPages" required />
+        <br />
+        <button type="submit">Добавить книгу</button>
+    </form>
+    
+    <!-- Поле поиска -->
+    <div>
+        <h3>Поиск по названию</h3>
+        <input type="text" id="searchInput" />
+    </div>
+    
+    <!-- Сортировка книг -->
+    <div>
+        <h3>Сортировка</h3>
+        <select id="sortSelect">
+            <option value="">Выберите сортировку:</option>
+            <option value="titleAsc">Название (по возрастанию)</option>
+            <option value="titleDesc">Название (по убыванию)</option>
+            <option value="yearAsc">Год (по возрастанию)</option>
+            <option value="yearDesc">Год (по убыванию)</option>
+        </select>
+    </div>
+    
+    <!-- Список книг -->
+    <ul id="bookList"></ul>
+    
+    <script src="script.js"></script>
+    </body>
