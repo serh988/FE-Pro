@@ -1,31 +1,32 @@
+// 1. Функция custom_fetch
 function custom_fetch(url, callback) {
     fetch(url)
         .then(response => {
-            if (response.status === 200) {
+            if (response.ok) {
                 return response.json();
             } else {
-                throw new Error(`Ошибка запроса: ${response.status}`);
+                throw new Error(`Ошибка: ${response.status}`);
             }
         })
         .then(data => {
             callback(data);
         })
         .catch(error => {
-            console.error("Ошибка при выполнении запроса:", error);
+            console.error('Ошибка выполнения запроса:', error);
         });
 }
 
-async function getUserList(ids) {
-    const userList = document.getElementById('userList');
-    userList.innerHTML = "";
-
-    for (let id of ids) {
+// 2. Функция getUserList
+async function getUserList(userIds) {
+        for (let id of userIds) {
         const url = `https://jsonplaceholder.typicode.com/users/${id}`;
         
-        custom_fetch(url, (user) => {
-            const li = document.createElement('li');
-            li.textContent = `${user.name} - ${user.email}`;
-            userList.appendChild(li);
+        
+        custom_fetch(url, user => {
+            const userList = document.getElementById('userList');
+            const listItem = document.createElement('li');
+            listItem.innerText = `ID: ${user.id}, Name: ${user.name}, Email: ${user.email}`;
+            userList.appendChild(listItem);
         });
     }
 }
